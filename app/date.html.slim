@@ -1,0 +1,104 @@
+- fullweekdays = { '1' => 'Lundi', '2' => 'Mardi', '3' => 'Mercredi', '4' => 'Jeudi', '5' => 'Vendredi', '6' => 'Samedi', '7' => 'Dimanche' }
+- months = { '01' => 'janvier', '02' => 'février', '03' => 'mars', '04' => 'avril', '05' => 'mai', '06' => 'juin', '07' => 'juillet', '08' => 'août', '09' => 'septembre', '10' => 'octobre', '11' => 'novembre', '12' => 'décembre' }
+
+- weekday = date.datetime.strftime('%u')
+- day = date.datetime.strftime('%d')
+- month = date.datetime.strftime('%m')
+- year = date.datetime.strftime('%Y')
+- time = date.datetime.strftime('%Hh%M')
+
+- full_date = fullweekdays[weekday] + ' ' + day + ' ' + months[month] + ' ' + year + ' — ' + time
+
+.l-main__head
+
+  .v-overview
+    .l-container.l-container--large
+      .v-overview__container
+
+        .v-overview__aside
+          = image_tag date.picture.url({ w: 520 }), :alt => date.picture.alt, :class => 'v-overview__picture'
+
+        .v-overview__main
+          .v-overview__heading
+            = ui_component('date',
+              link: false,
+              slug: date.slug,
+              title: date.title,
+              subtitle: date.subtitle,
+              datetime: { \
+                weekday: weekday,
+                day: day,
+                month: month,
+                year: year,
+                time: time,
+              },
+            )
+
+          = image_tag date.picture.url({ w: 520 }), :alt => date.picture.alt, :class => 'v-overview__picture'
+
+          .v-overview__more
+            - if date.tickets_link
+              = ui_component('button',
+                label: 'Billetterie',
+                href: date.tickets_link,
+                target: '_blank',
+                additional_classes: 'v-overview__button',
+              )
+            - else
+              .v-overview__upcoming= "— Billetterie bientôt ouverte !"
+
+          .v-overview__infos
+            .v-overview__info
+              .v-overview__label= "Où ?"
+              .v-overview__value= date.location
+            .v-overview__info
+              .v-overview__label= "Quand ?"
+              .v-overview__value= full_date
+            .v-overview__info
+              .v-overview__label= "Tarifs"
+              .v-overview__value
+                span= "Pré-ventes :"
+                strong= date.presales
+                =" (+ frais de réservation)"
+                br
+                = "Caisse du soir : "
+                strong= date.box_office
+                br
+                = "Carte culture : "
+                strong= date.carte_culture
+
+.l-main__body
+
+  .v-bands
+    .l-container.l-container--small
+      .v-bands__items
+
+        - for band in date.bands
+          .v-bands__item
+            .v-bands__heading
+              span.v-bands__title= band.name
+              span.v-bands__subtitle
+                = "("
+                = band.style
+                - if band.country != ''
+                  = ", "
+                  = band.country
+                = ")"
+            - if band.description != ''
+              .v-bands__description
+                = band.description
+            - if band.video and band.video.provider_uid
+              .v-bands__media
+                iframe.v-bands__video(width="560" height="315" src="https://www.youtube.com/embed/#{band.video.provider_uid}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+.l-main__foot.u-align-center
+  - if date.tickets_link
+    = ui_component('button',
+      label: 'Billetterie',
+      href: date.tickets_link,
+      target: '_blank',
+      additional_classes: 'v-overview__button',
+    )
+  - else
+    .v-overview__upcoming= "— Billetterie bientôt ouverte !"

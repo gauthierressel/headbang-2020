@@ -1,0 +1,183 @@
+/**
+ * LAYOUT
+ * Name: Footer
+ ********************************* */
+
+.l-footer {
+  position: relative;
+
+  &:not(:first-child) {
+
+    @include mq($until: small) {
+      @include rem(margin-top, $gutter-size);
+    }
+
+    @include mq($from: small, $until: medium) {
+      @include rem(margin-top, $gutter-size*1.5);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(margin-top, $gutter-size*2);
+    }
+
+    @include mq($from: large) {
+      @include rem(margin-top, $gutter-size*3);
+    }
+  }
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-footer__container {
+
+    @include mq($until: large) {
+      @include rem(padding-top, $gutter-size);
+      @include rem(padding-bottom, $gutter-size);
+    }
+
+    @include mq($from: large) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      @include rem(padding-top, $gutter-size*1.5);
+      @include rem(padding-bottom, $gutter-size*1.5);
+    }
+  }
+
+
+    /**
+     * SECTIONS
+     *********************** */
+    .l-footer__links {
+
+      @include mq($from: large) {
+        flex: 1 1 auto;
+      }
+    }
+
+    .l-footer__socials {
+
+      @include mq($until: large) {
+        @include rem(margin-top, $gutter-size/2);
+      }
+
+      @include mq($from: large) {
+        flex: 0 0 auto;
+      }
+    }
+
+
+      /**
+       * INNER
+       *********************** */
+      .l-footer__items {
+
+        @include mq($until: large) {
+
+          .l-footer__socials & {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        @include mq($from: large) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+        }
+      }
+
+        .l-footer__item {
+          
+          @include mq($until: small) {
+            @include font-size(12px, 15px);
+          }
+          
+          @include mq($from: small) {
+            @include font-size(14px, 18px);
+          }
+
+          @include mq($until: medium) {
+
+            &:not(:first-child) {
+
+              .l-footer__links & {
+
+                @include mq($until: small) {
+                  @include rem(margin-top, $gutter-size/4);
+                }
+
+                @include mq($from: small) {
+                  @include rem(margin-top, $gutter-size/2);
+                }
+              }
+
+              .l-footer__socials & {
+                @include rem(margin-left, $gutter-size/4);
+              }
+            }
+          }
+
+          @include mq($from: medium, $until: large) {
+
+            &:not(:first-child) {
+
+              .l-footer__links & {
+                @include rem(margin-top, $gutter-size/4);
+              }
+
+              .l-footer__socials & {
+                @include rem(margin-left, $gutter-size/2);
+              }
+            }
+          }
+
+          @include mq($until: large) {
+            text-align: center;
+          }
+
+          @include mq($from: large) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            &:not(:first-child) {
+
+              .l-footer__links & {
+
+                &:before {
+                  content: '•';
+                  display: block;
+                  @include rem(margin-right, 5px);
+                  @include rem(margin-left, 5px);
+                }
+              }
+
+              .l-footer__socials & {
+                @include rem(margin-left, 15px);
+              }
+            }
+          }
+        }
+
+          .l-footer__link {
+
+            .l-footer__links & {
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+            .l-footer__label {}
+
+            .l-footer__icon {}

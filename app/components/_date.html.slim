@@ -1,0 +1,35 @@
+- weekdays = { '1' => 'Lun.', '2' => 'Mar.', '3' => 'Mer.', '4' => 'Jeu.', '5' => 'Ven.', '6' => 'Sam.', '7' => 'Dim.' }
+- months = { '01' => 'janvier', '02' => 'février', '03' => 'mars', '04' => 'avril', '05' => 'mai', '06' => 'juin', '07' => 'juillet', '08' => 'août', '09' => 'septembre', '10' => 'octobre', '11' => 'novembre', '12' => 'décembre' }
+
+- label = weekdays[datetime[:weekday]] + ' ' + datetime[:day] + ' ' + months[datetime[:month]] + ' ' + datetime[:year]
+
+- if datetime[:time]
+  - label += ' — ' + datetime[:time]
+
+
+- if link
+  - href = '/' + slug + '.html'
+  = link_to href, :class => 'c-date' do
+    .c-date__container.u-glitch
+
+      - for i in 1..3
+        .c-date__inner.u-glitch-item
+
+          .c-date__label= label
+          .c-date__title= title
+
+          - if subtitle
+            .c-date__subtitle= subtitle
+
+- else
+  .c-date
+    .c-date__container.u-glitch
+
+      - for i in 1..3
+        .c-date__inner.u-glitch-item
+
+          .c-date__label= label
+          .c-date__title= title
+
+          - if subtitle
+            .c-date__subtitle= subtitle

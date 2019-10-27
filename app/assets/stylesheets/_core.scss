@@ -1,0 +1,82 @@
+@import "vendors/reset";
+
+:root {
+  --vh-offset: 0px;
+  --vw-offset: 0px;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include rem(min-width, 320px);
+  background: $color-background none;
+  color: $color-foreground;
+  font-family: $font-default;
+  font-size: em($font-size, $rem-baseline);
+  line-height: $line-height / $font-size;
+  font-weight: $font-regular;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+a {
+  color: $color-foreground;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img,
+svg {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}

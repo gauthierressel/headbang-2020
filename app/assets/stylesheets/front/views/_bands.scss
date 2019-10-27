@@ -1,0 +1,84 @@
+/**
+ * VIEW
+ * Name: Bands
+ ********************************* */
+
+.v-bands {
+  position: relative;
+}
+
+
+  /**
+   * ITEMS
+   *********************** */
+  .v-bands__items {}
+
+    .v-bands__item {
+
+      &:not(:first-child) {
+        @include rem(margin-top, $gutter-size*3);
+      }
+    }
+
+      .v-bands__heading {}
+
+        .v-bands__title {
+          font-weight: $font-bold;
+          text-transform: uppercase;
+
+          @include mq($until: medium) {
+            @include font-size(28px, 28px);
+          }
+
+          @include mq($from: medium) {
+            @include font-size(40px, 40px);
+          }
+        }
+
+        .v-bands__subtitle {
+          @include rem(padding-left, $gutter-size/4);
+          font-weight: $font-bold;
+
+          @include mq($until: medium) {
+            @include font-size(12px, 16px);
+          }
+
+          @include mq($from: medium) {
+            @include font-size(16px, 24px);
+          }
+        }
+
+      .v-bands__description {
+        text-align: justify;
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/2);
+        }
+
+        p {
+
+          &:not(:first-child) {
+            @include rem(margin-top, $gutter-size/2);
+          }
+        }
+      }
+
+      .v-bands__media {
+        position: relative;
+        width: 100%;
+        padding-top: 56.5%;
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size);
+        }
+      }
+
+        .v-bands__video {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }

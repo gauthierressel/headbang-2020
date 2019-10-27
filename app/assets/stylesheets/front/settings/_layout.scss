@@ -1,0 +1,44 @@
+/**
+ * SETTINGS
+ * Name: Layout
+ ********************************* */
+
+
+/**
+ * BREAKPOINTS
+ *********************** */
+$mq-breakpoints: (
+  "small": 480px,
+  "medium": 720px,
+  "large": 960px,
+  "xlarge": 1280px
+);
+
+
+/**
+ * CONTAINER
+ *********************** */
+$container-width: 1280px;
+$container-small: 960px;
+$container-large: 1440px;
+
+
+/**
+ * GUTTER
+ *********************** */
+$gutter-size: 40px;
+
+
+/**
+ * Z-INDEX
+ *********************** */
+$z-header: 99;
+$z-main: 9;
+$z-footer: 19;
+
+
+/**
+ * REM
+ *********************** */
+$rem-fallback: true;
+$rem-baseline: 10px;

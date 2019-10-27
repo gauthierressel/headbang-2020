@@ -1,0 +1,173 @@
+/**
+ * COMPONENT
+ * Name: Date
+ ********************************* */
+
+.c-date {
+  position: relative;
+}
+
+  .c-date__container {}
+
+    .c-date__inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+
+      @include mq($from: small, $until: large) {
+        align-items: center;
+        text-align: center;
+      }
+      
+      .v-dates & {
+
+        @include mq($from: large) {
+          align-items: flex-end;
+          text-align: right;
+        }
+      }
+    }
+
+      .c-date__label,
+      .c-date__title,
+      .c-date__subtitle {
+        text-transform: uppercase;
+      }
+
+      .c-date__label {
+        position: relative;
+        @include rem(padding-right, 5px);
+        @include rem(padding-left, 5px);
+
+        &:before {
+          content: '';
+          position: absolute;
+          @include rem(height, 10px);
+          right: 0;
+          @include rem(bottom, -4px);
+          left: 0;
+          background-color: $color-primary;
+          z-index: -1;
+        }
+
+        @include mq($until: large) {
+          @include font-size(14px, 14px);
+
+          .v-overview & {
+
+            @include mq($from: small) {
+              @include font-size(16px, 16px);
+            }
+          }
+        }
+
+        @include mq($from: large) {
+          @include font-size(16px, 16px);
+
+          .v-overview & {
+
+            @include mq($until: xlarge) {
+              @include font-size(18px, 18px);
+            }
+
+            @include mq($from: xlarge) {
+              @include font-size(22px, 22px);
+            }
+          }
+        }
+      }
+
+      .c-date__title {
+        font-weight: $font-bold;
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/4);
+        }
+
+        @include mq($until: small) {
+          @include font-size(30px, 30px);
+          letter-spacing: $letter-spacing/2;
+
+          .v-overview & {
+            @include font-size(44px, 44px);
+          }
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include font-size(42px, 42px);
+          letter-spacing: $letter-spacing/2;
+
+          .v-overview & {
+            @include font-size(65px, 65px);
+          }
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include font-size(54px, 54px);
+          letter-spacing: $letter-spacing;
+
+          .v-overview & {
+            @include font-size(78px, 78px);
+          }
+        }
+
+        @include mq($from: large) {
+          @include font-size(65px, 65px);
+          letter-spacing: $letter-spacing;
+
+          .v-overview & {
+
+            @include mq($until: xlarge) {
+              @include font-size(78px, 78px);
+            }
+
+            @include mq($from: xlarge) {
+              @include font-size(90px, 90px);
+            }
+          }
+        }
+      }
+      
+      .c-date__subtitle {
+        font-weight: $font-bold;
+
+        @include mq($until: small) {
+          @include font-size(18px, 18px);
+
+          .v-overview & {
+            @include font-size(21px, 21px);
+          }
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include font-size(21px, 21px);
+
+          .v-overview & {
+            @include font-size(27px, 27px);
+          }
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include font-size(24px, 24px);
+
+          .v-overview & {
+            @include font-size(30px, 30px);
+          }
+        }
+
+        @include mq($from: large) {
+          @include font-size(28px, 28px);
+
+          .v-overview & {
+
+            @include mq($until: xlarge) {
+              @include font-size(30px, 30px);
+            }
+
+            @include mq($from: xlarge) {
+              @include font-size(34px, 34px);
+            }
+          }
+        }
+      }

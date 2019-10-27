@@ -1,0 +1,8 @@
+- classes = ''
+
+- if additional_classes
+  - classes = additional_classes
+
+a.c-button(class=classes href=href)
+  .c-button__label= label
+  = svg_sprite 'arrow-right', :width => 20, :height => 16, :class => 'c-button__icon'

@@ -1,0 +1,38 @@
+/**
+ * SETTINGS
+ * Name: Colors
+ ********************************* */
+
+$color-black: #161616;
+$color-white: #fff;
+$color-grey: #f5f5f5;
+
+$color-purple: #5d4093;
+$color-red: #e72424;
+
+
+/**
+ * MAIN
+ *********************** */
+$color-primary: $color-purple;
+$color-secondary: $color-red;
+
+$color-foreground: $color-white;
+$color-background: $color-black;
+
+$color-success: green;
+$color-error: $color-red;
+
+
+/**
+ * UTILS
+ *********************** */
+$colors: (
+  "black": $color-black,
+  "white": $color-white,
+  "grey": $color-grey,
+  "purple": $color-purple,
+  "red": $color-red,
+  "primary": $color-primary,
+  "secondary": $color-secondary
+);

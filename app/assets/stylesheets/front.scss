@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// SHARED IMPORTS
+@import "shared";
+
+// // SCOPES
+// // Prefix: s
+// @import "front/scopes/content";
+
+// // COMPONENTS
+// // Reutilisable components
+// // Prefix: c
+@import "front/components/button";
+@import "front/components/date";
+@import "front/components/manifest";
+
+// VIEWS
+// Views elements
+// Prefix: v
+@import "front/views/bands";
+@import "front/views/dates";
+@import "front/views/menu";
+@import "front/views/overview";
+
+// LAYOUTS
+// Layout elements
+// Prefix: l
+@import "front/layouts/base";
+@import "front/layouts/container";
+@import "front/layouts/gallery";
+@import "front/layouts/header";
+@import "front/layouts/footer";
+@import "front/layouts/main";
+
+// UTILITIES
+// Utility classes
+// Prefix: u
+@import "front/utilities/animations";
+@import "front/utilities/colors";
+@import "front/utilities/glitch";
+@import "front/utilities/hidden";
+@import "front/utilities/img";
+@import "front/utilities/text";
+
+// A11y
+// Accessibility tool
+// @import "a11y.css/sass/a11y-fr";

@@ -1,0 +1,210 @@
+/**
+ * VIEW
+ * Name: Overview
+ ********************************* */
+
+.v-overview {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .v-overview__container {
+
+    @include mq($from: large) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+
+    /**
+     * ASIDE
+     *********************** */
+    .v-overview__aside {
+
+      @include mq($until: large) {
+        display: none;
+      }
+
+      @include mq($from: large) {
+        flex: 0 0 auto;
+      }
+      
+      @include mq($from: large, $until: xlarge) {
+        @include rem(width, 360px);
+      }
+      
+      @include mq($from: xlarge) {
+        @include rem(width, 520px);
+      }
+    }
+
+
+    /**
+     * MAIN
+     *********************** */
+    .v-overview__main {
+
+      @include mq($from: small, $until: large) {
+        text-align: center;
+      }
+
+      @include mq($from: large) {
+        flex: 1 1 auto;
+      }
+      
+      @include mq($from: large, $until: xlarge) {
+        @include rem(margin-left, $gutter-size*1.5);
+      }
+      
+      @include mq($from: xlarge) {
+        @include rem(margin-left, $gutter-size*2);
+      }
+    }
+
+
+      /**
+       * HEADING
+       *********************** */
+      .v-overview__heading {}
+
+
+      /**
+       * PICTURE
+       *********************** */
+      .v-overview__picture {
+
+        @include mq($until: large) {
+
+          .v-overview__main & {
+            display: block;
+            width: 100%;
+            @include rem(max-width, 380px);
+            margin-right: auto;
+            margin-left: auto;
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size);
+            }
+          }
+        }
+
+        @include mq($from: large) {
+
+          .v-overview__main & {
+            display: none;
+          }
+        }
+      }
+
+
+      /**
+       * MORE
+       *********************** */
+      .v-overview__more {
+
+        @include mq($until: small) {
+          text-align: center;
+        }
+
+        &:not(:first-child) {
+
+          @include mq($until: medium) {
+            @include rem(margin-top, $gutter-size);
+          }
+
+          @include mq($from: medium) {
+            @include rem(margin-top, $gutter-size*1.5);
+          }
+        }
+      }
+
+        .v-overview__upcoming {
+          position: relative;
+          display: inline-block;
+          font-weight: $font-bold;
+
+          @include mq($until: medium) {
+            @include font-size(16px, 20px);
+          }
+
+          @include mq($from: medium) {
+            @include font-size(20px, 24px);
+          }
+        }
+
+
+      /**
+       * INFOS
+       *********************** */
+      .v-overview__infos {
+
+        &:not(:first-child) {
+
+          @include mq($until: medium) {
+            @include rem(margin-top, $gutter-size);
+          }
+
+          @include mq($from: medium) {
+            @include rem(margin-top, $gutter-size*1.5);
+          }
+        }
+      }
+
+
+        /**
+         * INFO
+         *********************** */
+        .v-overview__info {
+
+          &:not(:first-child) {
+
+            @include mq($until: medium) {
+              @include rem(margin-top, $gutter-size/2);
+            }
+
+            @include mq($from: medium) {
+              @include rem(margin-top, $gutter-size);
+            }
+          }
+        }
+
+
+          /**
+           * LABEL
+           *********************** */
+          .v-overview__label {
+            position: relative;
+            display: inline-block;
+            font-weight: $font-bold;
+
+            &:before {
+              content: '';
+              position: absolute;
+              @include rem(height, 10px);
+              @include rem(right, -5px);
+              @include rem(bottom, 2px);
+              @include rem(left, -5px);
+              background-color: $color-primary;
+              z-index: -1;
+            }
+
+            @include mq($until: medium) {
+              @include font-size(22px, 26px);
+            }
+
+            @include mq($from: medium) {
+              @include font-size(28px, 32px);
+            }
+          }
+
+
+          /**
+           * VALUE
+           *********************** */
+          .v-overview__value {}
+          .v-overview__suffix {}

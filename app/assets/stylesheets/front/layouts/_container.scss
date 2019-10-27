@@ -1,0 +1,43 @@
+/**
+ * LAYOUT
+ * Name: Container
+ ********************************* */
+
+.l-container {
+  @include rem(max-width, $container-width);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq($until: medium) {
+    @include rem(padding-right, $gutter-size*0.75);
+    @include rem(padding-left, $gutter-size*0.75);
+  }
+
+  @include mq($from: medium, $until: large) {
+    @include rem(padding-right, $gutter-size);
+    @include rem(padding-left, $gutter-size);
+  }
+
+  @include mq($from: large, $until: xlarge) {
+    @include rem(padding-right, $gutter-size*1.5);
+    @include rem(padding-left, $gutter-size*1.5);
+  }
+
+  @include mq($from: xlarge) {
+    @include rem(padding-right, $gutter-size*2);
+    @include rem(padding-left, $gutter-size*2);
+  }
+
+  .l-container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+.l-container--small {
+  @include rem(max-width, $container-small);
+}
+
+.l-container--large {
+  @include rem(max-width, $container-large);
+}

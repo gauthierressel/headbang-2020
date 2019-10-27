@@ -1,0 +1,25 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: table;
+
+    clear: both;
+  }
+}
+
+@mixin appearance {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  background: none;
+  border: 0 none;
+  border-radius: 0;
+}

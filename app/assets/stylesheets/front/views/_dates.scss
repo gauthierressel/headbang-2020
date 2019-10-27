@@ -1,0 +1,117 @@
+/**
+ * VIEW
+ * Name: Dates
+ ********************************* */
+
+.v-dates {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .v-dates__container {
+
+    @include mq($from: large) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+
+    /**
+     * ASIDE
+     *********************** */
+    .v-dates__aside {
+
+      @include mq($until: large) {
+        display: none;
+      }
+
+      @include mq($from: large) {
+        order: 1;
+        flex: 0 0 auto;
+      }
+
+      @include mq($from: large, $until: xlarge) {
+        @include rem(width, 280px);
+      }
+
+      @include mq($from: xlarge) {
+        @include rem(width, 380px);
+      }
+    }
+
+      .v-dates__title {
+        @include font-size(16px, 16px);
+        font-weight: $font-bold;
+        text-transform: uppercase;
+      }
+
+      .v-dates__new {
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/2);
+        }
+      }
+
+        .v-dates__link {}
+
+          .v-dates__picture {
+            height: auto;
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/2.5);
+            }
+          }
+
+
+    /**
+     * MAIN
+     *********************** */
+    .v-dates__main {
+
+      @include mq($from: large) {
+        order: 2;
+        flex: 1 1 auto;
+        @include rem(padding-left, $gutter-size);
+      }
+    }
+
+      .v-dates__items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        @include mq($until: small) {
+          align-items: flex-start;
+        }
+
+        @include mq($from: small, $until: large) {
+          align-items: center;
+        }
+
+        @include mq($from: large) {
+          align-items: flex-end;
+        }
+      }
+
+        .v-dates__item {
+
+          &:not(:first-child) {
+
+            @include mq($until: small) {
+              @include rem(margin-top, $gutter-size*0.75);
+            }
+
+            @include mq($from: small,$until: medium) {
+              @include rem(margin-top, $gutter-size);
+            }
+
+            @include mq($from: medium) {
+              @include rem(margin-top, $gutter-size*1.5);
+            }
+          }
+        }

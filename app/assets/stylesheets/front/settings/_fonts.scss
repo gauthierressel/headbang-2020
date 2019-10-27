@@ -1,0 +1,57 @@
+/**
+ * SETTINGS
+ * Name: Fonts
+ ********************************* */
+
+
+/**
+ * IMPORTS
+ *********************** */
+@font-face {
+  font-family: "Futura";
+  src: url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+       url('../fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+       url('../fonts/FuturaPT-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url('../fonts/FuturaPT-MediumObl.woff2') format('woff2'),
+       url('../fonts/FuturaPT-MediumObl.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+
+/**
+ * FAMILIES
+ *********************** */
+$font-sans-serif: "Futura", "Arial", sans-serif;
+$font-primary: $font-sans-serif;
+$font-default: $font-primary;
+
+
+/**
+ * SIZES
+ *********************** */
+$font-size: 18px;
+$line-height: 24px;
+$letter-spacing: -4px;
+
+
+/**
+ * WEIGHTS
+ *********************** */
+$font-regular: 500;
+$font-bold: 600;

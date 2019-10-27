@@ -1,0 +1,18 @@
+doctype html
+html(lang="fr" class="no-js")
+
+  head
+    = render :partial => "layouts/front/head"
+
+  body(class=body_class id="top")
+
+    header.l-header
+      = render :partial => "layouts/front/header"
+
+    main.l-main
+      = yield
+
+    footer.l-footer
+      = render :partial => "layouts/front/footer"
+
+    = render :partial => "layouts/front/foot"

@@ -1,0 +1,31 @@
+.l-container.l-container--large
+  .l-header__container
+
+    a.l-header__home.u-glitch(href='/')
+      = svg_sprite 'logo', :width => 220, :height => 117, :class => 'l-header__logo u-glitch-item'
+      = svg_sprite 'logo', :width => 220, :height => 117, :class => 'l-header__logo u-glitch-item'
+      = svg_sprite 'logo', :width => 220, :height => 117, :class => 'l-header__logo u-glitch-item'
+
+    .l-header__navigation
+      .l-header__items
+        .l-header__item
+          a.l-header__link(href='/manifeste.html')
+            .l-header__label= 'Manifeste'
+        .l-header__item
+          a.l-header__link(href='#')
+            .l-header__label= 'Informations utiles'
+        .l-header__item
+          a.l-header__link(href='#')
+            .l-header__label= 'Contact'
+
+    .l-header__buttons
+      = ui_component('button',
+        label: 'Billetterie',
+        href: 'https://web.digitick.com/index-css5-headbang-pg1.html',
+        target: '_blank',
+        additional_classes: 'l-header__button',
+      )
+
+    .l-header__menu
+      = svg_sprite 'menu', :width => 24, :height => 24, :class => 'l-header__icon'
+

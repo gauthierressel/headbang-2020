@@ -1,0 +1,25 @@
+// SETTINGS
+@import "front/settings/animations";
+@import "front/settings/colors";
+@import "front/settings/fonts";
+@import "front/settings/layout";
+
+// TOOLS
+// Functions and mixins
+@import "front/tools/animations";
+@import "front/tools/colors";
+@import "front/tools/fonts";
+@import "front/tools/layout";
+@import "front/tools/text";
+
+// NPM/BOWER/SPROCKETS
+// Libraries imported from node_module, bower_components and some gems, with link to the documentation
+@import "sass-mq/mq";                 // https://github.com/sass-mq/sass-mq
+@import "sass-rem/rem";               // https://github.com/pierreburel/sass-rem
+@import "sass-em/em";                 // https://github.com/pierreburel/sass-em
+@import "slick-carousel/slick/slick.scss";
+@import "aos/src/sass/aos";
+
+// CORE
+// Reset & core styles
+@import "core";

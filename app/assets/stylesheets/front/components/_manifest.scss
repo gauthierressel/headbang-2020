@@ -1,0 +1,254 @@
+/**
+ * COMPONENT
+ * Name: Manifest
+ ********************************* */
+
+.c-manifest {
+  position: relative;
+}
+
+
+  /**
+   * BODY
+   *********************** */
+  .c-manifest__body {
+    overflow: hidden;
+  }
+
+
+    /**
+     * CONTAINER
+     *********************** */
+    .c-manifest__container {}
+
+      .c-manifest__content {}
+
+        .c-manifest__title {
+          font-weight: $font-bold;
+
+          @include mq($until: small) {
+            @include font-size(32px, 32px);
+          }
+
+          @include mq($from: small, $until: medium) {
+            @include font-size(43px, 43px);
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include font-size(54px, 54px);
+          }
+
+          @include mq($from: small) {
+            @include font-size(65px, 65px);
+          }
+        }
+
+        .c-manifest__text {
+
+          &:not(:first-child) {
+
+            @include mq($until: medium) {
+              @include rem(margin-top, $gutter-size/2);
+            }
+
+            @include mq($from: medium) {
+              @include rem(margin-top, $gutter-size);
+            }
+          }
+
+          @include mq($until: small) {
+            @include font-size(18px, 24px);
+          }
+
+          @include mq($from: small, $until: medium) {
+            @include font-size(21px, 28px);
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include font-size(24px, 32px);
+          }
+
+          @include mq($from: large) {
+            @include font-size(26px, 40px);
+          }
+        }
+
+        .c-manifest__pictures {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+
+          @include mq($until: medium) {
+            @include rem(margin-right, -$gutter-size/4);
+            @include rem(margin-left, -$gutter-size/4);
+          }
+
+          @include mq($from: medium, $until: xlarge) {
+            @include rem(margin-right, -$gutter-size);
+            @include rem(margin-left, -$gutter-size);
+          }
+
+          @include mq($from: xlarge) {
+            @include rem(margin-right, -$gutter-size*4);
+            @include rem(margin-left, -$gutter-size*4);
+          }
+
+          &:not(:first-child) {
+
+            @include mq($until: small) {
+              @include rem(margin-top, $gutter-size);
+              @include rem(margin-bottom, $gutter-size);
+            }
+
+            @include mq($from: small, $until: medium) {
+              @include rem(margin-top, $gutter-size*1.5);
+              @include rem(margin-bottom, $gutter-size*1.5);
+            }
+
+            @include mq($from: medium, $until: large) {
+              @include rem(margin-top, $gutter-size*2);
+              @include rem(margin-bottom, $gutter-size*2);
+            }
+
+            @include mq($from: large, $until: xlarge) {
+              @include rem(margin-top, $gutter-size*2.5);
+              @include rem(margin-bottom, $gutter-size*2.5);
+            }
+
+            @include mq($from: xlarge) {
+              @include rem(margin-top, $gutter-size*3);
+              @include rem(margin-bottom, $gutter-size*3);
+            }
+          }
+        }
+
+        .c-manifest__media {
+
+          @include mq($from: xlarge) {
+            @include rem(margin-right, -$gutter-size*2);
+            @include rem(margin-left, -$gutter-size*2);
+          }
+
+          &:not(:first-child) {
+
+            @include mq($until: small) {
+              @include rem(margin-top, $gutter-size);
+              @include rem(margin-bottom, $gutter-size);
+            }
+
+            @include mq($from: small, $until: medium) {
+              @include rem(margin-top, $gutter-size*1.5);
+              @include rem(margin-bottom, $gutter-size*1.5);
+            }
+
+            @include mq($from: medium, $until: large) {
+              @include rem(margin-top, $gutter-size*2);
+              @include rem(margin-bottom, $gutter-size*2);
+            }
+
+            @include mq($from: large, $until: xlarge) {
+              @include rem(margin-top, $gutter-size*2.5);
+              @include rem(margin-bottom, $gutter-size*2.5);
+            }
+
+            @include mq($from: xlarge) {
+              @include rem(margin-top, $gutter-size*3);
+              @include rem(margin-bottom, $gutter-size*3);
+            }
+          }
+        }
+
+          .c-manifest__picture {
+            height: auto;
+
+            .c-manifest__pictures & {
+              width: 50%;
+
+              @include mq($until: medium) {
+                @include rem(padding-right, $gutter-size/4);
+                @include rem(padding-left, $gutter-size/4);
+              }
+
+              @include mq($from: medium) {
+                @include rem(padding-right, $gutter-size);
+                @include rem(padding-left, $gutter-size);
+              }
+            }
+          }
+
+
+  /**
+   * FOOT
+   *********************** */
+  .c-manifest__foot {
+
+    @include mq($until: large) {
+      display: none;
+    }
+
+    &:not(:first-child) {
+
+      @include mq($until: small) {
+        @include rem(margin-top, $gutter-size*2);
+        @include rem(margin-bottom, $gutter-size*2);
+      }
+
+      @include mq($from: small, $until: medium) {
+        @include rem(margin-top, $gutter-size*2.5);
+      }
+
+      @include mq($from: medium, $until: large) {
+        @include rem(margin-top, $gutter-size*3);
+      }
+
+      @include mq($from: large, $until: xlarge) {
+        @include rem(margin-top, $gutter-size*3.5);
+      }
+
+      @include mq($from: xlarge) {
+        @include rem(margin-top, $gutter-size*4);
+      }
+    }
+  }
+
+    .c-manifest__columns,
+    .c-manifest__rows {
+
+      &:not(:first-child) {
+        @include rem(margin-top, $gutter-size*2);
+      }
+    }
+
+      .c-manifest__subtitle {
+        @include font-size(17px, 24px);
+        font-weight: $font-bold;
+      }
+
+      .c-manifest__list {
+        @include font-size(15px, 20px);
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/2);
+        }
+
+        .c-manifest__columns & {
+          columns: 5;
+        }
+
+        .c-manifest__rows & {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          @include rem(margin-right, -$gutter-size/2);
+          @include rem(margin-left, -$gutter-size/2);
+        }
+      }
+
+        .c-manifest__item {
+
+          .c-manifest__rows & {
+            width: 16.666%;
+            @include rem(padding, $gutter-size/2);
+          }
+        }

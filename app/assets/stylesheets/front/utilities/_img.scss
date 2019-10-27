@@ -1,0 +1,13 @@
+.u-img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 100%;
+  background-color: $color-white;
+  font-size: 0;
+  line-height: 0;
+}
+
+.u-img-circle {
+  border-radius: 50%;
+}

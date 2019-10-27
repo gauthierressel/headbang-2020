@@ -1,0 +1,210 @@
+/**
+ * LAYOUT
+ * Name: Header
+ ********************************* */
+
+.l-header {
+  position: relative;
+}
+
+
+  /**
+   * CONTAINER
+   *********************** */
+  .l-header__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @include mq($until: medium) {
+      @include rem(padding-top, $gutter-size*0.75);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(padding-top, $gutter-size);
+    }
+
+    @include mq($from: large, $until: xlarge) {
+      @include rem(padding-top, $gutter-size*1.5);
+    }
+
+    @include mq($from: xlarge) {
+      @include rem(padding-top, $gutter-size*2);
+    }
+  }
+
+
+    /**
+     * HOME
+     *********************** */
+    .l-header__home {
+      
+      @include mq($until: large) {
+        flex: 1 1 auto;
+      }
+      
+      @include mq($from: large) {
+        flex: 0 0 auto;
+      }
+    }
+
+      .l-header__logo {
+        height: auto;
+        fill: $color-primary;
+
+        @include mq($until: small) {
+          @include rem(width, 72px);
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include rem(width, 96px);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include rem(width, 120px);
+        }
+
+        @include mq($from: large, $until: xlarge) {
+          @include rem(width, 150px);
+        }
+      }
+
+
+    /**
+     * NAVIGATION
+     *********************** */
+    .l-header__navigation {
+      flex: 1 0 auto;
+
+      @include mq($until: large) {
+        display: none;
+      }
+    }
+
+      .l-header__items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+
+        /**
+         * ITEM
+         *********************** */
+        .l-header__item {
+
+          @include mq($from: large, $until: xlarge) {
+
+            &:not(:first-child) {
+              @include rem(margin-left, $gutter-size*0.75);
+            }
+          }
+
+          @include mq($from: xlarge) {
+
+            &:not(:first-child) {
+              @include rem(margin-left, $gutter-size*1.5);
+            }
+          }
+        }
+
+          .l-header__link {}
+
+            .l-header__label {
+              position: relative;
+              display: block;
+              @include rem(padding-right, 5px);
+              @include rem(padding-left, 5px);
+              transition: transform 0.3s ease;
+
+              &:before {
+                content: '';
+                position: absolute;
+                @include rem(height, 14px);
+                right: 0;
+                @include rem(bottom, -4px);
+                left: 0;
+                background-color: $color-primary;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+                z-index: -1;
+              }
+
+              .l-header__link:hover & {
+
+                &:before {
+                  transform: scaleX(1);
+                  transform-origin: left;
+                }
+              }
+
+              @include mq($from: large, $until: xlarge) {
+                @include font-size(20px, 20px);
+              }
+
+              @include mq($from: xlarge) {
+                @include font-size(22px, 22px);
+              }
+            }
+
+
+    /**
+     * BUTTONS
+     *********************** */
+    .l-header__buttons {
+      flex: 0 0 auto;
+
+      @include mq($from: large, $until: xlarge) {
+
+        &:not(:first-child) {
+          @include rem(margin-left, $gutter-size*0.75);
+        }
+      }
+
+      @include mq($from: xlarge) {
+
+        &:not(:first-child) {
+          @include rem(margin-left, $gutter-size*1.5);
+        }
+      }
+    }
+
+      .l-header__button {}
+
+
+    /**
+     * MENU
+     *********************** */
+    .l-header__menu {
+
+      &:not(:first-child) {
+
+        @include mq($until: small) {
+          @include rem(margin-left, $gutter-size/2);
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include rem(margin-left, $gutter-size*0.75);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include rem(margin-left, $gutter-size);
+        }
+      }
+      
+      @include mq($from: large) {
+        display: none;
+      }
+    }
+
+      .l-header__icon {
+
+        @include mq($until: small) {
+          @include rem(width, 20px);
+          height: auto;
+        }
+      }

@@ -1,0 +1,70 @@
+/**
+ * LAYOUT
+ * Name: Main
+ ********************************* */
+
+.l-main {
+  position: relative;
+
+  &:not(:first-child) {
+
+    @include mq($until: medium) {
+      @include rem(margin-top, $gutter-size*1.5);
+    }
+
+    @include mq($from: medium, $until: large) {
+      @include rem(margin-top, $gutter-size*2);
+    }
+
+    @include mq($from: large, $until: xlarge) {
+      @include rem(margin-top, $gutter-size*3);
+    }
+
+    @include mq($from: xlarge) {
+      @include rem(margin-top, $gutter-size*4);
+    }
+  }
+}
+
+
+  /**
+   * HEAD
+   *********************** */
+  .l-main__head {}
+
+
+  /**
+   * BODY
+   *********************** */
+  .l-main__body {
+
+    &:not(:first-child) {
+      @include rem(margin-top, $gutter-size*4);
+    }
+  }
+
+
+  /**
+   * FOOT
+   *********************** */
+  .l-main__foot {
+
+    &:not(:first-child) {
+
+      @include mq($until: small) {
+        @include rem(margin-top, $gutter-size);
+      }
+
+      @include mq($from: small, $until: medium) {
+        @include rem(margin-top, $gutter-size*1.5);
+      }
+
+      @include mq($from: medium, $until: large) {
+        @include rem(margin-top, $gutter-size*2);
+      }
+
+      @include mq($from: large) {
+        @include rem(margin-top, $gutter-size*3);
+      }
+    }
+  }
