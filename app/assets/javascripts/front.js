@@ -6,8 +6,9 @@
 //= require vendors/_debounce.js
 //= require front/_modernizr.js
 //= require_self
-//= require front/_introduction.js
+//= require front/_menu.js
 //= require front/_parallax.js
+//= require front/_slider.js
 
 var $win = $(window),
     $doc = $(document),

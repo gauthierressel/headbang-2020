@@ -1,0 +1,14 @@
+- body_class 'page-contact'
+
+.l-main__head
+  .l-container.l-container--small
+    = ui_component('title',
+      first: "Nous",
+      second: "contacter.",
+    )
+
+.l-main__body
+  = render :partial => 'partials/contacts'
+
+.l-main__foot
+  / = render :partial => 'layouts/front/menu'

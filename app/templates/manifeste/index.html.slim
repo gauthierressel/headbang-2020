@@ -1,0 +1,14 @@
+- body_class 'page-manifeste'
+
+.l-main__head
+  .l-container.l-container--small
+    = ui_component('title',
+      first: "Headbang,",
+      second: "Loud and Proud.",
+    )
+
+.l-main__body
+  = render :partial => 'partials/manifest'
+
+.l-main__foot
+  / = render :partial => 'layouts/front/menu'

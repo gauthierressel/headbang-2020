@@ -1,0 +1,15 @@
+.l-gallery
+  .l-gallery__container
+    .l-gallery__inner
+
+      .l-gallery__more
+        = link_to '#', :class => 'l-gallery__link' do
+          .l-gallery__illustration
+            = svg_sprite 'instagram', :width => 60, :height => 60, :class => 'l-gallery__icon'
+            = svg_sprite 'instagram', :width => 60, :height => 60, :class => 'l-gallery__icon'
+            = svg_sprite 'instagram', :width => 60, :height => 60, :class => 'l-gallery__icon'
+          .l-gallery__label= '@headbangcrew'
+
+      .l-gallery__widget
+        script(src="https://snapwidget.com/js/snapwidget.js")
+        iframe(src="https://snapwidget.com/embed/752262" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;")

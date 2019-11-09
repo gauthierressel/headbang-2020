@@ -8,7 +8,7 @@
 
 
 - if link
-  - href = '/' + slug + '.html'
+  - href = '/' + slug + '/'
   = link_to href, :class => 'c-date' do
     .c-date__container.u-glitch
 
@@ -20,6 +20,9 @@
 
           - if subtitle
             .c-date__subtitle= subtitle
+
+          - if caption
+            .c-date__caption= caption
 
 - else
   .c-date
@@ -33,3 +36,6 @@
 
           - if subtitle
             .c-date__subtitle= subtitle
+
+          - if caption
+            .c-date__caption= caption

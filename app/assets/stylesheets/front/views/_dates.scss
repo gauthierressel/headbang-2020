@@ -31,6 +31,7 @@
       }
 
       @include mq($from: large) {
+        display: none;
         order: 1;
         flex: 0 0 auto;
       }
@@ -100,14 +101,24 @@
 
         .v-dates__item {
 
+          @include mq($until: medium) {
+            width: 100%;
+          }
+
           &:not(:first-child) {
 
             @include mq($until: small) {
               @include rem(margin-top, $gutter-size*0.75);
+              @include rem(padding-top, $gutter-size*0.75);
             }
 
             @include mq($from: small,$until: medium) {
               @include rem(margin-top, $gutter-size);
+              @include rem(padding-top, $gutter-size);
+            }
+
+            @include mq($until: medium) {
+              border-top: 1px solid #444;
             }
 
             @include mq($from: medium) {

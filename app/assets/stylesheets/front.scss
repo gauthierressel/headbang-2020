@@ -11,12 +11,15 @@
 // // Reutilisable components
 // // Prefix: c
 @import "front/components/button";
+@import "front/components/contacts";
 @import "front/components/date";
 @import "front/components/manifest";
+@import "front/components/title";
 
 // VIEWS
 // Views elements
 // Prefix: v
+@import "front/views/background";
 @import "front/views/bands";
 @import "front/views/dates";
 @import "front/views/menu";

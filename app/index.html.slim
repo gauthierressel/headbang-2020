@@ -1,8 +1,13 @@
+- body_class 'page-home'
+
+- content_for :background do
+  - render :partial => 'partials/background'
+
 .l-main__head
-  = render :partial => 'layouts/front/dates'
+  = render :partial => 'partials/dates'
 
 .l-main__body
-  = render :partial => 'layouts/front/gallery'
+  = render :partial => 'partials/gallery'
 
 .l-main__foot
-  = render :partial => 'layouts/front/menu'
+  = render :partial => 'partials/menu'

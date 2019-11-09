@@ -6,6 +6,8 @@ html(lang="fr" class="no-js")
 
   body(class=body_class id="top")
 
+    = content_for :background
+
     header.l-header
       = render :partial => "layouts/front/header"
 

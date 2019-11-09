@@ -1,3 +1,5 @@
+- body_class 'page-date'
+
 - date = date || dato.dates[0]
 
 - fullweekdays = { '1' => 'Lundi', '2' => 'Mardi', '3' => 'Mercredi', '4' => 'Jeudi', '5' => 'Vendredi', '6' => 'Samedi', '7' => 'Dimanche' }
@@ -42,6 +44,7 @@
             - if date.tickets_link
               = ui_component('button',
                 label: 'Billetterie',
+                suffix: 'frais de réservation offerts !',
                 href: date.tickets_link,
                 target: '_blank',
                 additional_classes: 'v-overview__button',
@@ -98,6 +101,7 @@
   - if date.tickets_link
     = ui_component('button',
       label: 'Billetterie',
+      suffix: 'frais de réservation offerts !',
       href: date.tickets_link,
       target: '_blank',
       additional_classes: 'v-overview__button',

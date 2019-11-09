@@ -37,6 +37,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   overflow-y: auto;
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   height: 215vh;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   background: linear-gradient(-25deg, $color-background 20%, $color-primary);
+  //   background: linear-gradient(75deg, #5d4093 -80%, #161616 120%);
+  //   background: radial-gradient(circle at left, #5d4093, transparent);
+  //   z-index: -1;
+  // }
+
+  &.menu-opened {
+    overflow: hidden;
+  }
 }
 
 a {

@@ -6,16 +6,16 @@
       = svg_sprite 'logo', :width => 220, :height => 117, :class => 'l-header__logo u-glitch-item'
       = svg_sprite 'logo', :width => 220, :height => 117, :class => 'l-header__logo u-glitch-item'
 
-    .l-header__navigation
+    .l-header__navigation.js-menu
       .l-header__items
         .l-header__item
-          a.l-header__link(href='/manifeste.html')
+          a.l-header__link(href='/manifeste/' data-page='manifeste')
             .l-header__label= 'Manifeste'
         .l-header__item
-          a.l-header__link(href='#')
+          a.l-header__link(href='/informations-utiles/' data-page='informations-utiles')
             .l-header__label= 'Informations utiles'
         .l-header__item
-          a.l-header__link(href='#')
+          a.l-header__link(href='/contact/' data-page='contact')
             .l-header__label= 'Contact'
 
     .l-header__buttons
@@ -27,5 +27,5 @@
       )
 
     .l-header__menu
-      = svg_sprite 'menu', :width => 24, :height => 24, :class => 'l-header__icon'
+      = svg_sprite 'menu', :width => 24, :height => 24, :class => 'l-header__icon js-toggle-menu'
 

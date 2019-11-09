@@ -1,0 +1,25 @@
+/**
+ * COMPONENT
+ * Name: Title
+ ********************************* */
+
+.c-title {
+  position: relative;
+  font-weight: $font-bold;
+
+  @include mq($until: small) {
+    @include font-size(38px, 32px);
+  }
+
+  @include mq($from: small, $until: medium) {
+    @include font-size(50px, 43px);
+  }
+
+  @include mq($from: medium, $until: large) {
+    @include font-size(62px, 54px);
+  }
+
+  @include mq($from: small) {
+    @include font-size(74px, 65px);
+  }
+}

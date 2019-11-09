@@ -5,4 +5,8 @@
 
 a.c-button(class=classes href=href)
   .c-button__label= label
+
+  - if suffix
+    .c-button__suffix= suffix
+
   = svg_sprite 'arrow-right', :width => 20, :height => 16, :class => 'c-button__icon'

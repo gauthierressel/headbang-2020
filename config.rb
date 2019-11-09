@@ -13,6 +13,11 @@ page '*.txt', layout: false
 # Ignore .md file in assets
 ignore "assets/**/*.md"
 
+# Proxy
+proxy "/contact/index.html", "/templates/contact/index.html"
+proxy "/informations-utiles/index.html", "/templates/informations-utiles/index.html"
+proxy "/manifeste/index.html", "/templates/manifeste/index.html"
+
 ###
 # Dirs
 ###
@@ -55,7 +60,7 @@ end
 activate :dato
 
 dato.dates.each do |date|
-  proxy "/#{date.slug}.html", "/date.html", :locals => { :date => date }
+  proxy "/#{date.slug}/index.html", "/templates/date/index.html", :locals => { :date => date }
 end
 
 ###

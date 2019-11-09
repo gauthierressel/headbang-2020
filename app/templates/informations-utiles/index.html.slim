@@ -1,0 +1,14 @@
+- body_class 'page-informations-utiles'
+
+.l-main__head
+  .l-container.l-container--small
+    = ui_component('title',
+      first: "Informations",
+      second: "utiles.",
+    )
+
+.l-main__body
+  / = render :partial => 'partials/manifest'
+
+.l-main__foot
+  / = render :partial => 'layouts/front/menu'

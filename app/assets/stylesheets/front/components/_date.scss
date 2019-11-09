@@ -7,8 +7,16 @@
   position: relative;
 }
 
+
+  /**
+   * CONTAINER
+   *********************** */
   .c-date__container {}
 
+
+    /**
+     * INNER
+     *********************** */
     .c-date__inner {
       display: flex;
       flex-direction: column;
@@ -31,10 +39,15 @@
 
       .c-date__label,
       .c-date__title,
-      .c-date__subtitle {
+      .c-date__subtitle,
+      .c-date__caption {
         text-transform: uppercase;
       }
 
+
+      /**
+       * LABEL
+       *********************** */
       .c-date__label {
         position: relative;
         @include rem(padding-right, 5px);
@@ -62,22 +75,27 @@
           }
         }
 
-        @include mq($from: large) {
+        @include mq($from: large, $until: xlarge) {
           @include font-size(16px, 16px);
 
           .v-overview & {
+            @include font-size(18px, 18px);
+          }
+        }
 
-            @include mq($until: xlarge) {
-              @include font-size(18px, 18px);
-            }
+        @include mq($from: xlarge) {
+          @include font-size(20px, 20px);
 
-            @include mq($from: xlarge) {
-              @include font-size(22px, 22px);
-            }
+          .v-overview & {
+            @include font-size(22px, 22px);
           }
         }
       }
 
+
+      /**
+       * TITLE
+       *********************** */
       .c-date__title {
         font-weight: $font-bold;
 
@@ -112,23 +130,29 @@
           }
         }
 
-        @include mq($from: large) {
+        @include mq($from: large, $until: xlarge) {
           @include font-size(65px, 65px);
           letter-spacing: $letter-spacing;
 
           .v-overview & {
+            @include font-size(78px, 78px);
+          }
+        }
 
-            @include mq($until: xlarge) {
-              @include font-size(78px, 78px);
-            }
+        @include mq($from: xlarge) {
+          @include font-size(75px, 75px);
+          letter-spacing: $letter-spacing;
 
-            @include mq($from: xlarge) {
-              @include font-size(90px, 90px);
-            }
+          .v-overview & {
+            @include font-size(90px, 90px);
           }
         }
       }
-      
+
+
+      /**
+       * SUBTITLE
+       *********************** */
       .c-date__subtitle {
         font-weight: $font-bold;
 
@@ -156,18 +180,48 @@
           }
         }
 
-        @include mq($from: large) {
+        @include mq($from: large, $until: xlarge) {
           @include font-size(28px, 28px);
 
           .v-overview & {
-
-            @include mq($until: xlarge) {
-              @include font-size(30px, 30px);
-            }
-
-            @include mq($from: xlarge) {
-              @include font-size(34px, 34px);
-            }
+            @include font-size(30px, 30px);
           }
+        }
+
+        @include mq($from: xlarge) {
+          @include font-size(30px, 28px);
+
+          .v-overview & {
+            @include font-size(34px, 34px);
+          }
+        }
+      }
+
+
+      /**
+       * CAPTION
+       *********************** */
+      .c-date__caption {
+        font-weight: $font-bold;
+        color: $color-primary;
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/8);
+        }
+
+        @include mq($until: small) {
+          @include font-size(14px, 14px);
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include font-size(16px, 16px);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include font-size(18px, 18px);
+        }
+
+        @include mq($from: large) {
+          @include font-size(20px, 20px);
         }
       }

@@ -1,0 +1,89 @@
+/**
+ * VIEW
+ * Name: Background
+ ********************************* */
+
+.v-background {
+
+  @include mq($until: medium) {
+    display: none;
+  }
+
+  @include mq($from: medium) {
+    position: absolute;
+    z-index: -1;
+  }
+
+  @include mq($from: medium, $until: large) {
+    @include rem(width, 780px);
+    @include rem(top, $gutter-size*6);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mq($from: large, $until: xlarge) {
+    @include rem(width, 920px);
+    @include rem(top, $gutter-size);
+    left: calc((100vw - 1440px) / 2 - #{$gutter-size*3.5});
+  }
+
+  @include mq($from: xlarge) {
+    @include rem(width, 1080px);
+    @include rem(top, $gutter-size*2.5);
+    left: calc((100vw - 1440px) / 2 - #{$gutter-size*9.5});
+  }
+}
+
+
+  /**
+   * ITEMS
+   *********************** */
+  .v-background__items {}
+
+    .v-background__item {}
+
+      .v-background__picture {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        .v-background__item:nth-child(1) & {
+          clip-path: url('#letter-h');
+        }
+
+        .v-background__item:nth-child(2) & {
+          clip-path: url('#letter-e');
+        }
+
+        .v-background__item:nth-child(3) & {
+          clip-path: url('#letter-a');
+        }
+
+        .v-background__item:nth-child(4) & {
+          clip-path: url('#letter-d');
+        }
+
+        .v-background__item:nth-child(5) & {
+          clip-path: url('#letter-b');
+        }
+
+        .v-background__item:nth-child(6) & {
+          clip-path: url('#letter-a-bis');
+        }
+
+        .v-background__item:nth-child(7) & {
+          clip-path: url('#letter-n');
+        }
+
+        .v-background__item:nth-child(8) & {
+          clip-path: url('#letter-g');
+        }
+
+        @include mq($from: medium, $until: large) {
+          opacity: 0.2;
+        }
+
+        @include mq($from: large) {
+          opacity: 0.4;
+        }
+      }

@@ -27,7 +27,8 @@
       color: $color-primary;
     }
 
-    .u-glitch:hover & {
+    a .u-glitch:hover &,
+    a.u-glitch:hover & {
 
       &:first-child {
         animation-name: glitch-anim-text;
