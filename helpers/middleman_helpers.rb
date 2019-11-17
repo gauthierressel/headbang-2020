@@ -17,6 +17,10 @@ module MiddlemanHelpers
     content_for_separator :meta_description, desc, ' '
   end
 
+  def meta_picture(picture = nil)
+    content_for_separator :meta_picture, picture, ''
+  end
+
   def meta_keywords(keywords = nil)
     content_for_separator :meta_keywords, keywords, ' '
   end

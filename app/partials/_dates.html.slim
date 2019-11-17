@@ -8,33 +8,34 @@
         .v-dates__items
 
           - for date in dato.dates
-            - if date.new
-              - new_dates.push(date)
-            .v-dates__item
-              = ui_component('date',
-                link: true,
-                slug: date.slug,
-                title: date.title,
-                subtitle: date.subtitle,
-                caption: date.location,
-                datetime: { \
-                  weekday: date.datetime.strftime('%u'),
-                  day: date.datetime.strftime('%d'),
-                  month: date.datetime.strftime('%m'),
-                  year: date.datetime.strftime('%Y'),
-                },
-              )
+            / - if date.new
+            /   - new_dates.push(date)
+            - if date.datetime.strftime('%Y%m%d') >= Date.today.strftime('%Y%m%d')
+              .v-dates__item
+                = ui_component('date',
+                  link: true,
+                  slug: date.slug,
+                  title: date.title,
+                  subtitle: date.subtitle,
+                  caption: date.location,
+                  datetime: { \
+                    weekday: date.datetime.strftime('%u'),
+                    day: date.datetime.strftime('%d'),
+                    month: date.datetime.strftime('%m'),
+                    year: date.datetime.strftime('%Y'),
+                  },
+                )
 
-      - if new_dates.length > 0
-        .v-dates__aside
+      / - if new_dates.length > 0
+      /   .v-dates__aside
 
-          .v-dates__title
-            - if new_dates.length == 1
-              = 'Nouvelle annonce ! 👇'
-            - else
-              = 'Nouvelles annonces ! 👇'
+      /     .v-dates__title
+      /       - if new_dates.length == 1
+      /         = 'Nouvelle annonce ! 👇'
+      /       - else
+      /         = 'Nouvelles annonces ! 👇'
 
-          - for new_date in new_dates
-            .v-dates__new
-              = link_to "/#{new_date.slug}.html", :class => 'v-dates__link' do
-                = image_tag new_date.picture.url({ w: 380 }), :alt => new_date.picture.alt, :class => 'v-dates__picture'
+      /     - for new_date in new_dates
+      /       .v-dates__new
+      /         = link_to "/#{new_date.slug}.html", :class => 'v-dates__link' do
+      /           = image_tag new_date.picture.url({ w: 380 }), :alt => new_date.picture.alt, :class => 'v-dates__picture'

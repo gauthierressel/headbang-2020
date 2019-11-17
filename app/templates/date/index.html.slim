@@ -13,6 +13,13 @@
 
 - full_date = fullweekdays[weekday] + ' ' + day + ' ' + months[month] + ' ' + year + ' — ' + time
 
+
+- meta_title "#{date.title}, #{date.location} | Headbang, Loud and Proud"
+- meta_description "Informations et billetterie pour #{date.title} #{date.subtitle}, #{date.location} le #{fullweekdays[weekday]} #{day} #{months[month]} #{year}."
+- meta_picture "#{date.picture.url({ w: 1200, h: 620, fit: 'crop', crop: 'top' })}"
+
+
+
 .l-main__head
 
   .v-overview
