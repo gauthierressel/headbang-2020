@@ -4,6 +4,12 @@
  ********************************* */
 
 .v-background {
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  body.is-ready & {
+    opacity: 1;
+  }
 
   @include mq($until: medium) {
     display: none;

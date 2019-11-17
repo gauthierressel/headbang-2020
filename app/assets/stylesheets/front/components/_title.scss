@@ -19,7 +19,7 @@
     @include font-size(62px, 54px);
   }
 
-  @include mq($from: small) {
+  @include mq($from: large) {
     @include font-size(74px, 65px);
   }
 }

@@ -30,13 +30,30 @@
   /**
    * HEAD
    *********************** */
-  .l-main__head {}
+  .l-main__head {
+    transform: translate3d(0, $gutter-size, 0);
+    opacity: 0;
+    transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+
+    body.is-ready & {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
 
 
   /**
    * BODY
    *********************** */
   .l-main__body {
+    transform: translate3d(0, $gutter-size, 0);
+    opacity: 0;
+    transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
+
+    body.is-ready & {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
 
     &:not(:first-child) {
 

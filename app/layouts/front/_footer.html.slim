@@ -4,26 +4,29 @@
     .l-footer__links
       .l-footer__items
         .l-footer__item
-          .l-footer__label= 'Copyright © 2020 Headbang / Association Hopla!'
+          .l-footer__label
+            = "Copyright © "
+            = Date.today.strftime('%Y')
+            = " Headbang / Association Hopla!"
         .l-footer__item
-          = link_to '#', :class => 'l-footer__link' do
+          = link_to '/mentions-legales/', :class => 'l-footer__link' do
             .l-footer__label= 'Mentions légales'
         .l-footer__item
-          = link_to '#', :class => 'l-footer__link' do
+          = link_to '/politique-de-confidentialite/', :class => 'l-footer__link' do
             .l-footer__label= 'Politique de confidentialité'
         .l-footer__item
-          = link_to '#', :class => 'l-footer__link' do
+          = link_to '/credits/', :class => 'l-footer__link' do
             .l-footer__label= 'Crédits'
 
     .l-footer__socials
       .l-footer__items
         .l-footer__item
-          = link_to '#', :class => 'l-footer__link u-glitch' do
+          = link_to 'https://www.facebook.com/headbang2015/', :target => '_blank', :class => 'l-footer__link u-glitch' do
             = svg_sprite 'facebook', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'
             = svg_sprite 'facebook', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'
             = svg_sprite 'facebook', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'
         .l-footer__item
-          = link_to '#', :class => 'l-footer__link u-glitch' do
+          = link_to 'https://www.instagram.com/headbangcrew/', :target => '_blank', :class => 'l-footer__link u-glitch' do
             = svg_sprite 'instagram', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'
             = svg_sprite 'instagram', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'
             = svg_sprite 'instagram', :width => 32, :height => 32, :class => 'l-footer__icon u-glitch-item'

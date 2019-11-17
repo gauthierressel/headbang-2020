@@ -17,6 +17,9 @@ ignore "assets/**/*.md"
 proxy "/contact/index.html", "/templates/contact/index.html"
 proxy "/informations-utiles/index.html", "/templates/informations-utiles/index.html"
 proxy "/manifeste/index.html", "/templates/manifeste/index.html"
+proxy "/mentions-legales/index.html", "/templates/mentions-legales/index.html"
+proxy "/politique-de-confidentialite/index.html", "/templates/politique-de-confidentialite/index.html"
+proxy "/credits/index.html", "/templates/credits/index.html"
 
 ###
 # Dirs

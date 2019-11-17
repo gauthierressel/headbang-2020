@@ -5,6 +5,15 @@
 
 .l-header {
   position: relative;
+
+  body.page-home & {
+    opacity: 0;
+    transition: opacity 1s ease 0.2s;
+  }
+
+  body.is-ready & {
+    opacity: 1;
+  }
 }
 
 

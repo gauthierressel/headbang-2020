@@ -1,0 +1,11 @@
+.l-main__head
+  .l-container.l-container--small
+    = ui_component('title',
+      first: "Politique de ",
+      second: "confidentialité.",
+    )
+
+.l-main__body
+  .l-container.l-container--small
+    .s-content
+      = dato.privacy_policy.content

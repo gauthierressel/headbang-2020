@@ -1,0 +1,327 @@
+/**
+ * VIEW
+ * Name: Informations
+ ********************************* */
+
+.v-informations {
+  position: relative;
+}
+
+
+  /**
+   * SECTION
+   *********************** */
+  .v-informations__section {
+
+    &:not(:first-child) {
+
+      @include mq($until: small) {
+        @include rem(margin-top, $gutter-size*2);
+      }
+
+      @include mq($from: small, $until: large) {
+        @include rem(margin-top, $gutter-size*3);
+      }
+
+      @include mq($from: large) {
+        @include rem(margin-top, $gutter-size*4);
+      }
+    }
+  }
+
+
+    /**
+     * TITLE
+     *********************** */
+    .v-informations__title {
+      position: relative;
+      @include rem(padding-bottom, $gutter-size/2);
+      font-weight: $font-bold;
+
+      &:after {
+        content: '';
+        position: absolute;
+        @include rem(width, 100px);
+        @include rem(height, 10px);
+        bottom: 0;
+        left: 0;
+        background-color: $color-primary;
+      }
+
+      @include mq($until: small) {
+        @include font-size(26px, 26px);
+      }
+
+      @include mq($from: small, $until: medium) {
+        @include font-size(32px, 32px);
+      }
+
+      @include mq($from: medium, $until: large) {
+        @include font-size(38px, 38px);
+      }
+
+      @include mq($from: large) {
+        @include font-size(44px, 44px);
+      }
+    }
+
+
+    /**
+     * ITEMS
+     *********************** */
+    .v-informations__items {
+
+      @include mq($until: medium) {
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size);
+        }
+      }
+
+      @include mq($from: medium) {
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size*1.5);
+        }
+      }
+
+      @include mq($from: medium) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include rem(margin-right, -$gutter-size/2);
+        @include rem(margin-left, -$gutter-size/2);
+      }
+    }
+
+      .v-informations__item {
+
+        @include mq($until: medium) {
+          text-align: center;
+
+          &:not(:first-child) {
+            @include rem(margin-top, $gutter-size);
+            @include rem(padding-top, $gutter-size);
+            border-top: 1px solid #444;
+          }
+        }
+
+        @include mq($from: medium, $until: large) {
+          width: 50%;
+          @include rem(padding, $gutter-size/2);
+        }
+
+        @include mq($from: large) {
+          width: 33.333%;
+          @include rem(padding, $gutter-size/2);
+        }
+      }
+
+        .v-informations__label {
+          font-weight: $font-bold;
+          color: $color-primary;
+
+          @include mq($until: small) {
+            @include font-size(18px, 18px);
+          }
+
+          @include mq($from: small, $until: medium) {
+            @include font-size(20px, 20px);
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include font-size(24px, 24px);
+          }
+
+          @include mq($from: small) {
+            @include font-size(26px, 26px);
+          }
+        }
+
+        .v-informations__subtitle {
+          font-weight: $font-bold;
+
+          @include mq($until: small) {
+            @include font-size(22px, 22px);
+          }
+
+          @include mq($from: small, $until: medium) {
+            @include font-size(26px, 26px);
+          }
+
+          @include mq($from: medium, $until: large) {
+            @include font-size(30px, 30px);
+          }
+
+          @include mq($from: small) {
+            @include font-size(34px, 34px);
+          }
+        }
+
+        .v-informations__address {
+          font-weight: $font-bold;
+
+          @include mq($until: medium) {
+            @include font-size(16px, 20px);
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/4);
+            }
+          }
+
+          @include mq($from: medium) {
+            @include font-size(20px, 26px);
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/2);
+            }
+          }
+        }
+
+        .v-informations__parking {
+          @include font-size(16px, 20px);
+
+          @include mq($until: medium) {
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/4);
+            }
+          }
+
+          @include mq($from: medium) {
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/2);
+            }
+          }
+        }
+
+        .v-informations__contact {
+          @include font-size(16px, 20px);
+
+          @include mq($until: medium) {
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/4);
+            }
+          }
+
+          @include mq($from: medium) {
+
+            &:not(:first-child) {
+              @include rem(margin-top, $gutter-size/2);
+            }
+          }
+
+          h4 {
+            position: relative;
+            display: inline-block;
+            @include rem(margin-left, -5px);
+            @include rem(margin-bottom, 5px);
+            @include rem(padding-right, 5px);
+            @include rem(padding-left, 5px);
+            font-weight: $font-bold;
+
+            &:before {
+              content: '';
+              position: absolute;
+              @include rem(height, 8px);
+              right: 0;
+              bottom: 0;
+              left: 0;
+              background-color: $color-primary;
+              z-index: -1;
+            }
+          }
+        }
+
+
+    /**
+     * CONTENT
+     *********************** */
+    .v-informations__content {
+
+      @include mq($until: medium) {
+        @include font-size(18px, 24px);
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size);
+        }
+      }
+
+      @include mq($from: medium) {
+        @include font-size(20px, 26px);
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size*2);
+        }
+      }
+
+      p {
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/2);
+        }
+      }
+
+      a {
+        color: $color-secondary;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+      .v-informations__highlight {
+
+        @include mq($until: small) {
+          font-weight: $font-bold;
+        }
+
+        @include mq($from: small, $until: medium) {
+          @include font-size(22px, 26px);
+        }
+
+        @include mq($from: medium, $until: large) {
+          @include font-size(26px, 32px);
+        }
+
+        @include mq($from: large) {
+          @include font-size(30px, 40px);
+
+          &:not(:last-child) {
+            @include rem(margin-bottom, $gutter-size*1.5);
+          }
+        }
+      }
+
+      .v-informations__logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        &:not(:first-child) {
+          @include rem(margin-top, $gutter-size/2);
+        }
+      }
+
+        .v-informations__logo {
+
+          &:not(:first-child) {
+
+            @include mq($until: small) {
+              @include rem(margin-left, $gutter-size/2);
+            }
+
+            @include mq($from: small, $until: medium) {
+              @include rem(margin-left, $gutter-size);
+            }
+
+            @include mq($from: medium) {
+              @include rem(margin-left, $gutter-size*1.5);
+            }
+          }
+        }
+

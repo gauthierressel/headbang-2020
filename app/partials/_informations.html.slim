@@ -1,0 +1,101 @@
+.v-informations
+  .l-container
+
+
+    .v-informations__section
+
+      h2.v-informations__title= "Se rendre à nos concerts."
+
+      .v-informations__items
+
+        .v-informations__item
+          .v-informations__label= "Colmar"
+          h3.v-informations__subtitle= "Le Grillen"
+          .v-informations__address
+            = "19 rue des Jardins"
+            br
+            = "68000 Colmar"
+          .v-informations__parking= "Parking disponible"
+          .v-informations__contact
+            h4= "Contact :"
+            p
+              = "03 89 21 61 80"
+              br
+              a(href="http://www.grillen.fr/" target="_blank")= "www.grillen.fr"
+
+        .v-informations__item
+          .v-informations__label= "Mulhouse"
+          h3.v-informations__subtitle= "Noumatrouff"
+          .v-informations__address
+            = "rue Alain Bashung"
+            br
+            = "68100 Mulhouse"
+          .v-informations__parking= "Parking disponible"
+          .v-informations__contact
+            h4= "Contact :"
+            p
+              = "03 89 32 94 10"
+              br
+              a(href="http://www.noumatrouff.fr/" target="_blank")= "www.noumatrouff.fr"
+
+        .v-informations__item
+          .v-informations__label= "Nancy"
+          h3.v-informations__subtitle= "Chez Paulette"
+          .v-informations__address
+            = "343 Rue Regina Kricq"
+            br
+            = "54200 Pagney-derrière-Barine"
+          .v-informations__parking= "Parking disponible"
+          .v-informations__contact
+            h4= "Contact :"
+            p
+              = "03 83 43 11 20"
+              br
+              a(href="https://www.paulettepubrock.com/" target="_blank")= "www.paulettepubrock.com"
+
+
+    .v-informations__section
+
+      h2.v-informations__title= "Où acheter mon billet ?"
+
+      .v-informations__content
+        p.v-informations__highlight
+          = "Sur la billetterie Headbang, "
+          strong= "les frais de réservations sont offerts !"
+          br
+          = "Rendez-vous sur : "
+          a(href="bit.ly/BilletterieHeadbang" target="_blank")= "bit.ly/BilletterieHeadbang"
+        p= "Retrouvez tous nos concerts dans les points de vente habituels, ainsi que chez nos partenaires en ligne :"
+        .v-informations__logos
+          a.v-informations__logo(href="https://www.fnacspectacles.com/" target="_blank")
+            = image_tag "/assets/images/front/fnac@2x.jpg", :alt => "Fnac", :width => 60, :height => 60, :class => 'v-informations__picture'
+          a.v-informations__logo(href="https://www.digitick.com/" target="_blank")
+            = image_tag "/assets/images/front/digitick@2x.jpg", :alt => "Digitick", :width => 120, :height => 35, :class => 'v-informations__picture'
+          a.v-informations__logo(href="https://www.ticketmaster.fr/" target="_blank")
+            = image_tag "/assets/images/front/ticketmaster@2x.jpg", :alt => "Ticketmaster", :width => 140, :height => 26, :class => 'v-informations__picture'
+
+
+    .v-informations__section
+
+      h2.v-informations__title= "Carte Culture : nos concerts à 6€ !"
+
+      .v-informations__content
+        p= "Le dispositif Carte culture, piloté par les universités d'Alsace, propose aux étudiants des tarifs préférentiels chez plus de 80 partenaires culturels en Alsace, et une programmation spécifique dédiée aux étudiant(e)s durant toute l’année universitaire."
+        p= "Valide pendant un an, elle donne accès à tous nos concerts au tarif unique de 6€ !"
+        p= "Rendez-vous au secrétariat de votre établissement ! Pour les étudiant(e)s de l'UHA, vous pouvez vous renseigner directement auprès du SUAC UHA (maison de l'Etudiant Mulhouse)."
+        p
+          = "En savoir plus : "
+          a(href="https://www.carte-culture.org/fr/" target="_blank")= "www.carte-culture.org"
+
+
+    .v-informations__section
+
+      h2.v-informations__title= "Groupes locaux : intégrer notre programmation."
+
+      .v-informations__content
+        p
+          = "Tu as un groupe et tu souhaites jouer au Grillen de Colmar ? Envoie-nous un e-mail avec toutes les informations de ton groupe (bio, liens, actus, expériences…) à l’adresse suivante : "
+          a(href="mailto:headbang.prog@gmail.com")= "headbang.prog@gmail.com"
+          = "."
+        p= "Il faut savoir que les opportunités sont rares pour une première partie, les plateaux en tournée ne nous permettent pas toujours d'y ajouter des groupes. Cependant, nous offrons la chance aux groupes locaux de se produire lors de nos dates dès que nous le pouvons ! Si une opportunité se présente et que ton groupe correspond à l’affiche, nous te recontacterons."
+
