@@ -27,7 +27,7 @@
     "gulp-postcss": "^6.2.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^2.4.0",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
@@ -44,13 +44,14 @@
   "dependencies": {
     "aos": "^2.3.4",
     "instafeed.js": "^1.4.1",
+    "jquery": "^1.12.4",
     "sass-em": "^1.0.2",
     "sass-mq": "^3.2.9",
     "sass-rem": "^1.2.2",
     "sass-resolution": "^1.0.0",
     "slick-carousel": "^1.8.1",
-    "smoothscroll-for-websites": "^1.4.6",
+    "smoothscroll-for-websites": "^1.4.10",
     "svg4everybody": "^2.1.4",
-    "swup": "^2.0.5"
+    "swup": "^2.0.8"
   }
 }
