@@ -208,3 +208,33 @@
            *********************** */
           .v-overview__value {}
           .v-overview__suffix {}
+
+            .v-overview__link {
+              position: relative;
+              display: inline-block;
+              @include rem(padding-right, 5px);
+              @include rem(padding-left, 5px);
+              @include font-size(18px, 18px);
+              font-weight: $font-bold;
+
+              &:before {
+                content: '';
+                position: absolute;
+                @include rem(height, 10px);
+                right: 0;
+                @include rem(bottom, -2px);
+                left: 0;
+                background-color: $color-primary;
+                transition: transform 0.2s ease;
+                transform-origin: left;
+                z-index: -1;
+              }
+
+              &:hover {
+
+                &:before {
+                  transform: scaleX(0);
+                  transform-origin: right;
+                }
+              }
+            }

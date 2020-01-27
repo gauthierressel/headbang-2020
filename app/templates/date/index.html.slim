@@ -69,15 +69,20 @@
             .v-overview__info
               .v-overview__label= "Tarifs"
               .v-overview__value
-                span= "Pré-ventes :"
+                span= "Pré-ventes : "
                 strong= date.presales
                 =" (+ frais de réservation)"
                 br
                 = "Caisse du soir : "
                 strong= date.box_office
                 br
-                = "Carte culture : "
+                = "Carte Culture : "
                 strong= date.carte_culture
+
+            - if date.facebook_event
+              .v-overview__info
+                .v-overview__value
+                  = link_to "Voir l'événement Facebook", date.facebook_event, :target => '_blank', :class => 'v-overview__link'
 
 .l-main__body
 
