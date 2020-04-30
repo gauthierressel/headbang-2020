@@ -44,7 +44,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "instafeed.js": "^1.4.1",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "sass-em": "^1.0.2",
     "sass-mq": "^3.2.9",
     "sass-rem": "^1.2.2",
